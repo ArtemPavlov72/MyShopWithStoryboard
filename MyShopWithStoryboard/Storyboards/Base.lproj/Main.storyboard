@@ -24,20 +24,50 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LmH-xY-AbW" customClass="ProductImageView" customModule="MyShopWithStoryboard" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="113"/>
+                                            <rect key="frame" x="16" y="0.0" width="100" height="113"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="150" id="0In-J4-rx7"/>
+                                                <constraint firstAttribute="width" constant="100" id="0In-J4-rx7"/>
                                             </constraints>
                                         </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3UO-75-d08">
+                                            <rect key="frame" x="132" y="11" width="262" height="91"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameProductLabel" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-5S-KHL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="262" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriprionLabel" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-vp-ppC">
+                                                    <rect key="frame" x="0.0" y="40" width="262" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enV-im-TB3">
+                                                    <rect key="frame" x="0.0" y="75" width="262" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3UO-75-d08" secondAttribute="bottom" id="6os-i7-NdU"/>
                                         <constraint firstItem="LmH-xY-AbW" firstAttribute="top" secondItem="LCp-rl-lZd" secondAttribute="top" id="8X6-TK-pLa"/>
                                         <constraint firstAttribute="bottom" secondItem="LmH-xY-AbW" secondAttribute="bottom" id="ABq-kB-YPL"/>
-                                        <constraint firstItem="LmH-xY-AbW" firstAttribute="leading" secondItem="LCp-rl-lZd" secondAttribute="leading" id="XVP-5q-AwP"/>
+                                        <constraint firstItem="3UO-75-d08" firstAttribute="leading" secondItem="LmH-xY-AbW" secondAttribute="trailing" constant="16" id="TUx-az-9Wp"/>
+                                        <constraint firstItem="LmH-xY-AbW" firstAttribute="leading" secondItem="LCp-rl-lZd" secondAttribute="leading" constant="16" id="XVP-5q-AwP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3UO-75-d08" secondAttribute="trailing" id="cyW-rl-3lY"/>
+                                        <constraint firstItem="3UO-75-d08" firstAttribute="top" secondItem="LCp-rl-lZd" secondAttribute="topMargin" id="x3k-DD-pwv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="productDescriptionLabel" destination="2bH-vp-ppC" id="mfW-jI-Pcd"/>
                                     <outlet property="productImageViewCell" destination="LmH-xY-AbW" id="gcb-oi-zoc"/>
+                                    <outlet property="productNameLabel" destination="a1e-5S-KHL" id="AzH-yr-Ush"/>
+                                    <outlet property="productPriceLabel" destination="enV-im-TB3" id="3FO-g3-Uyj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

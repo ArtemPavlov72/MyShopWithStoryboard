@@ -64,17 +64,13 @@
 		ACCEEF8428F951260034FB29 /* MyShopWithStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				ACCEEF8528F951260034FB29 /* AppDelegate.swift */,
-				ACCEEF8728F951260034FB29 /* SceneDelegate.swift */,
-				ACCEEF8928F951260034FB29 /* MainViewController.swift */,
-				ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */,
+				ACCEEFA728F96A770034FB29 /* ViewControllers */,
 				ACCEEFA128F955540034FB29 /* Views */,
 				ACCEEFA328F955610034FB29 /* Services */,
 				ACCEEFA228F9555C0034FB29 /* Models */,
-				ACCEEF8B28F951260034FB29 /* Main.storyboard */,
-				ACCEEF8E28F951270034FB29 /* Assets.xcassets */,
-				ACCEEF9028F951270034FB29 /* LaunchScreen.storyboard */,
-				ACCEEF9328F951270034FB29 /* Info.plist */,
+				ACCEEFA628F96A4C0034FB29 /* Storyboards */,
+				ACCEEFA428F96A1C0034FB29 /* App */,
+				ACCEEFA528F96A360034FB29 /* Resouces */,
 			);
 			path = MyShopWithStoryboard;
 			sourceTree = "<group>";
@@ -83,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCEEF9F28F9525F0034FB29 /* ImageView.swift */,
+				ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +98,41 @@
 				ACCEEF9928F9521C0034FB29 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		ACCEEFA428F96A1C0034FB29 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF8528F951260034FB29 /* AppDelegate.swift */,
+				ACCEEF8728F951260034FB29 /* SceneDelegate.swift */,
+				ACCEEF9328F951270034FB29 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ACCEEFA528F96A360034FB29 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF8E28F951270034FB29 /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		ACCEEFA628F96A4C0034FB29 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF8B28F951260034FB29 /* Main.storyboard */,
+				ACCEEF9028F951270034FB29 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ACCEEFA728F96A770034FB29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF8928F951260034FB29 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQ7NB58NL6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyShopWithStoryboard/Info.plist;
+				INFOPLIST_FILE = MyShopWithStoryboard/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQ7NB58NL6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyShopWithStoryboard/Info.plist;
+				INFOPLIST_FILE = MyShopWithStoryboard/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

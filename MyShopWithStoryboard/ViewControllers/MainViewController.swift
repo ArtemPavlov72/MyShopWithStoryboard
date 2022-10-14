@@ -9,14 +9,13 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
-   // private let cellID = "cell"
     private var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         loadProducts(from: "https://fakestoreapi.com/products")
-        tableView.rowHeight = 200
+        tableView.rowHeight = 250
     }
     
     private func loadProducts(from url: String) {
