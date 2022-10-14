@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyShopWithStoryboard
 //
-//  Created by Артем Павлов on 14.10.2022.
+//  Created by Artem Pavlov on 14.10.2022.
 //
 
 import UIKit

@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		ACCEEF8628F951260034FB29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF8528F951260034FB29 /* AppDelegate.swift */; };
 		ACCEEF8828F951260034FB29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF8728F951260034FB29 /* SceneDelegate.swift */; };
-		ACCEEF8A28F951260034FB29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF8928F951260034FB29 /* ViewController.swift */; };
+		ACCEEF8A28F951260034FB29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF8928F951260034FB29 /* MainViewController.swift */; };
 		ACCEEF8D28F951260034FB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCEEF8B28F951260034FB29 /* Main.storyboard */; };
 		ACCEEF8F28F951270034FB29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCEEF8E28F951270034FB29 /* Assets.xcassets */; };
 		ACCEEF9228F951270034FB29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCEEF9028F951270034FB29 /* LaunchScreen.storyboard */; };
+		ACCEEF9A28F9521C0034FB29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF9928F9521C0034FB29 /* NetworkManager.swift */; };
+		ACCEEF9C28F952320034FB29 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF9B28F952320034FB29 /* Shop.swift */; };
+		ACCEEF9E28F9524D0034FB29 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */; };
+		ACCEEFA028F9525F0034FB29 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF9F28F9525F0034FB29 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACCEEF8228F951260034FB29 /* MyShopWithStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyShopWithStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEEF8528F951260034FB29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCEEF8728F951260034FB29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACCEEF8928F951260034FB29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACCEEF8928F951260034FB29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACCEEF8C28F951260034FB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACCEEF8E28F951270034FB29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCEEF9128F951270034FB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACCEEF9328F951270034FB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCEEF9928F9521C0034FB29 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ACCEEF9B28F952320034FB29 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		ACCEEF9F28F9525F0034FB29 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				ACCEEF8528F951260034FB29 /* AppDelegate.swift */,
 				ACCEEF8728F951260034FB29 /* SceneDelegate.swift */,
-				ACCEEF8928F951260034FB29 /* ViewController.swift */,
+				ACCEEF8928F951260034FB29 /* MainViewController.swift */,
+				ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */,
+				ACCEEFA128F955540034FB29 /* Views */,
+				ACCEEFA328F955610034FB29 /* Services */,
+				ACCEEFA228F9555C0034FB29 /* Models */,
 				ACCEEF8B28F951260034FB29 /* Main.storyboard */,
 				ACCEEF8E28F951270034FB29 /* Assets.xcassets */,
 				ACCEEF9028F951270034FB29 /* LaunchScreen.storyboard */,
 				ACCEEF9328F951270034FB29 /* Info.plist */,
 			);
 			path = MyShopWithStoryboard;
+			sourceTree = "<group>";
+		};
+		ACCEEFA128F955540034FB29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF9F28F9525F0034FB29 /* ImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACCEEFA228F9555C0034FB29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF9B28F952320034FB29 /* Shop.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACCEEFA328F955610034FB29 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ACCEEF9928F9521C0034FB29 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACCEEF8A28F951260034FB29 /* ViewController.swift in Sources */,
+				ACCEEF9A28F9521C0034FB29 /* NetworkManager.swift in Sources */,
+				ACCEEF8A28F951260034FB29 /* MainViewController.swift in Sources */,
+				ACCEEF9E28F9524D0034FB29 /* ProductViewCell.swift in Sources */,
 				ACCEEF8628F951260034FB29 /* AppDelegate.swift in Sources */,
+				ACCEEF9C28F952320034FB29 /* Shop.swift in Sources */,
+				ACCEEFA028F9525F0034FB29 /* ImageView.swift in Sources */,
 				ACCEEF8828F951260034FB29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +344,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +372,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
