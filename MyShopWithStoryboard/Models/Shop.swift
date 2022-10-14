@@ -15,3 +15,7 @@ struct Product: Codable {
     let description: String?
     let image: String?
 }
+
+struct Sale {
+    let photo: String?
+}
