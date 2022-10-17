@@ -15,26 +15,42 @@ class MainViewController: UIViewController {
     
     
     private var products: [Product] = []
+    private var categories: [String] = []
     private var headerPhotos: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        loadProducts(from: "https://fakestoreapi.com/products")
+        loadProducts(from: Link.baseURL.rawValue)
+        loadCategories(from: Link.categoryURL.rawValue)
         loadSaleImages()
         productTableView.rowHeight = 250
         productTableView.delegate = self
         productTableView.dataSource = self
         headerCollectionView.delegate = self
         headerCollectionView.dataSource = self
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
     }
     
     private func loadProducts(from url: String) {
-        NetworkManager.shared.fetchData(from: url) { result in
+        NetworkManager.shared.fetchData(dataType: Product.self, from: url) { result in
             switch result {
             case .success(let products):
                 self.products = products
                 self.productTableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func loadCategories(from url: String) {
+        NetworkManager.shared.fetchData(dataType: String.self, from: url) { result in
+            switch result {
+            case .success(let categories):
+                self.categories = categories
+                self.categoryCollectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -63,22 +79,26 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource  {
 // MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        headerPhotos.count
+        if collectionView == headerCollectionView {
+            return headerPhotos.count
+        } else {
+            return categories.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = headerCollectionView.dequeueReusableCell(withReuseIdentifier: "saleCell", for: indexPath) as! HeaderCollectionViewCell
+        if collectionView == headerCollectionView {
+            let productCell = headerCollectionView.dequeueReusableCell(withReuseIdentifier: "saleCell", for: indexPath) as! HeaderCollectionViewCell
         let photo = headerPhotos[indexPath.item]
-        cell.configureCell(saleImageName: photo)
-        return cell
-    }
+        productCell.configureCell(saleImageName: photo)
+            return productCell
+        } else {
+            let categoryCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCollectionViewCell
+        let category = categories[indexPath.item]
+            categoryCell.configureCell(category: category)
+            return categoryCell
+        }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let paddingWidth: CGFloat = 20// * (numberOfItemsPerRow + 1)
-//        let avaibleWidth = headerCollectionView.frame.width - paddingWidth
-//        let widthPerItem = avaibleWidth
-//        return CGSize(width: widthPerItem, height: widthPerItem)
-//    }
-
+    }
 }
 

@@ -19,6 +19,7 @@
 		ACCEEFA028F9525F0034FB29 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEF9F28F9525F0034FB29 /* ImageView.swift */; };
 		ACCEEFA928F9A9950034FB29 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEFA828F9A9950034FB29 /* HeaderCollectionViewCell.swift */; };
 		ACCEEFAB28F9AC850034FB29 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEFAA28F9AC850034FB29 /* DataManager.swift */; };
+		ACCEEFAD28F9ED800034FB29 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEEFAC28F9ED800034FB29 /* CategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		ACCEEF9F28F9525F0034FB29 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		ACCEEFA828F9A9950034FB29 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACCEEFAA28F9AC850034FB29 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ACCEEFAC28F9ED800034FB29 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				ACCEEF9F28F9525F0034FB29 /* ImageView.swift */,
 				ACCEEF9D28F9524D0034FB29 /* ProductViewCell.swift */,
 				ACCEEFA828F9A9950034FB29 /* HeaderCollectionViewCell.swift */,
+				ACCEEFAC28F9ED800034FB29 /* CategoriesCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				ACCEEFA928F9A9950034FB29 /* HeaderCollectionViewCell.swift in Sources */,
 				ACCEEF8A28F951260034FB29 /* MainViewController.swift in Sources */,
 				ACCEEF9E28F9524D0034FB29 /* ProductViewCell.swift in Sources */,
+				ACCEEFAD28F9ED800034FB29 /* CategoriesCollectionViewCell.swift in Sources */,
 				ACCEEF8628F951260034FB29 /* AppDelegate.swift in Sources */,
 				ACCEEF9C28F952320034FB29 /* Shop.swift in Sources */,
 				ACCEEFA028F9525F0034FB29 /* ImageView.swift in Sources */,

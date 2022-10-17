@@ -19,3 +19,12 @@ struct Product: Codable {
 struct Sale {
     let photo: String?
 }
+
+struct Category: Codable {
+    let category: [String]
+}
+
+enum Link: String {
+    case baseURL = "https://fakestoreapi.com/products"
+    case categoryURL = "https://fakestoreapi.com/products/categories"
+}
